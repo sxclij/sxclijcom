@@ -7,13 +7,21 @@
     <meta name="description" content="C言語やScratch、マインクラフトのコマンドを活用し、自作言語の開発に取り組むsxclijさんのポートフォリオです。">
 </svelte:head>
 
+<nav class="navbar">
+    <ul>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#projects">プロジェクト</a></li>
+        <li><a href="#links">リンク</a></li>
+    </ul>
+</nav>
+
 <main>
     <header class="hero">
         <h1>sxclij</h1>
         <p>Student Developer | 自作言語・テキストエディタ開発者</p>
     </header>
 
-    <section class="section">
+    <section id="profile" class="section">
         <h2>プロフィール</h2>
         <p>
             sxclijです。スクさんと呼ばれています。C言語やScratch、マインクラフトのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とするエンジニアです。
@@ -21,7 +29,7 @@
         </p>
     </section>
 
-    <section class="section">
+    <section id="projects" class="section">
         <h2>プロジェクト</h2>
         <ul>
             <li>
@@ -42,7 +50,7 @@
         </ul>
     </section>
 
-    <section class="section">
+    <section id="links" class="section">
         <h2>リンク</h2>
         <ul class="links">
             <li>
@@ -97,9 +105,42 @@
         color: #81c784;
     }
 
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #1e1e1e;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 0 1rem;
+    }
+
+    .navbar a {
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #81c784;
+    }
+
     main {
         max-width: 800px;
-        margin: 0 auto;
+        margin: 4rem auto 0;
         padding: 2rem 1rem;
         background: #1e1e1e;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
