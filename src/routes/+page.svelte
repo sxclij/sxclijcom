@@ -60,6 +60,11 @@
                     Pagespeed: sxclij
                 </a>
             </li>
+            <li>
+                <a href="https://discord.gg/yFtY7ym4DA" target="_blank" rel="noopener noreferrer">
+                    Discord: sxclij-server
+                </a>
+            </li>
         </ul>
     </section>
 
