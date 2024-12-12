@@ -1,5 +1,5 @@
 <script>
-    export let data;
+    let x = 1;
 </script>
 
 <svelte:head>
