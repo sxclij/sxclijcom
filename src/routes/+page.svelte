@@ -78,6 +78,20 @@
         color: #e0e0e0;
     }
 
+    :global(a) {
+        color: #64b5f6;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    :global(a:hover) {
+        text-decoration: underline;
+    }
+
+    :global(a:visited) {
+        color: #81c784;
+    }
+
     main {
         max-width: 800px;
         margin: 0 auto;
@@ -117,20 +131,6 @@
 
     .links li {
         margin-bottom: 0.5rem;
-    }
-
-    :global(a) {
-        color: #64b5f6;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    :global(a:hover) {
-        text-decoration: underline;
-    }
-
-    :global(a:visited) {
-        color: #81c784;
     }
 
     .footer {
