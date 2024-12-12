@@ -1,10 +1,13 @@
 <script>
-    let x = 1;
+    import { writable } from "svelte/store";
 </script>
 
 <svelte:head>
     <title>sxclij - Portfolio</title>
-    <meta name="description" content="C言語やScratch、マインクラフトのコマンドを活用し、自作言語の開発に取り組むsxclijさんのポートフォリオです。">
+    <meta
+        name="description"
+        content="C言語やScratch、マインクラフトのコマンドを活用し、自作言語の開発に取り組むsxclijさんのポートフォリオです。"
+    />
 </svelte:head>
 
 <nav class="navbar">
@@ -36,15 +39,29 @@
                 <h3>テキストエディタの開発</h3>
                 <p>
                     C言語を使用して、とてもコンパクトな
-                    <a href="https://github.com/sxclij/sxceditor2" target="_blank" rel="noopener noreferrer">テキストエディタ</a>を開発しています。
+                    <a
+                        href="https://github.com/sxclij/sxceditor2"
+                        target="_blank"
+                        rel="noopener noreferrer">テキストエディタ</a
+                    >を開発しています。
                 </p>
             </li>
             <li>
                 <h3>自作プログラミング言語</h3>
                 <p>
                     趣味として
-                    <a href="https://github.com/sxclij/sxcscript" target="_blank" rel="noopener noreferrer">自作プログラミング言語</a>
-                    を設計し、独自のコンパイラやインタプリタの開発を行っています。
+                    <a
+                        href="https://github.com/sxclij/sxcscript"
+                        target="_blank"
+                        rel="noopener noreferrer">自作プログラミング言語</a
+                    >
+                    を設計し、
+                    <a
+                        href="https://scratch.mit.edu"
+                        target="_blank"
+                        rel="noopener noreferrer">Scratch</a
+                    >
+                    上で動作する独自のコンパイラやインタプリタの開発を行っています。
                 </p>
             </li>
         </ul>
@@ -54,22 +71,38 @@
         <h2>リンク</h2>
         <ul class="links">
             <li>
-                <a href="https://qiita.com/sxclij" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://qiita.com/sxclij"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Qiita: sxclij
                 </a>
             </li>
             <li>
-                <a href="https://github.com/sxclij" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://github.com/sxclij"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub: sxclij
                 </a>
             </li>
             <li>
-                <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.duckdns.org%2F" target="_blank" rel="noopener noreferrer">
-                    Pagespeed: sxclij
+                <a
+                    href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Pagespeed: sxclij.com
                 </a>
             </li>
             <li>
-                <a href="https://discord.gg/yFtY7ym4DA" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://discord.gg/yFtY7ym4DA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Discord: sxclij-server
                 </a>
             </li>
