@@ -1,11 +1,3 @@
-<svelte:head>
-    <title>sxclij.com</title>
-    <meta
-        name="description"
-        content="sxclijさんのポートフォリオ"
-    />
-</svelte:head>
-
 <script>
     const skills = [
         {
@@ -46,6 +38,11 @@
     ];
 </script>
 
+<svelte:head>
+    <title>sxclij.com</title>
+    <meta name="description" content="sxclijさんのポートフォリオ" />
+</svelte:head>
+
 <nav class="navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
@@ -84,7 +81,11 @@
         <h2>プロジェクト</h2>
         {#each projects as project}
             <h3>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {project.name}
                 </a>
             </h3>
@@ -165,7 +166,7 @@
         color: #81c784;
     }
 
-     .navbar {
+    .navbar {
         position: fixed;
         top: 0;
         left: 0;
