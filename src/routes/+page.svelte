@@ -1,16 +1,16 @@
 <script>
-    const profiles = [
+    const personalDetails = [
         {
-            title: "所属",
-            description: "無所属 / 無職",
+            label: "所属",
+            value: "無所属 / 無職",
         },
         {
-            title: "好きな言語",
-            description: "C / go / rust",
+            label: "好きな言語",
+            value: "C / go / rust",
         },
         {
-            title: "趣味",
-            description: "読書 / 音ゲー / nostr",
+            label: "趣味",
+            value: "読書 / 音ゲー / nostr",
         },
     ];
 
@@ -88,10 +88,21 @@
 </nav>
 
 <main>
-    <header class="hero">
-        <h1>sxclij</h1>
-        <p>Student Developer | 自作言語・テキストエディタ開発者</p>
-    </header>
+    <div class="hero-and-profile">
+        <header class="hero">
+            <h1>sxclij</h1>
+            <p>Student Developer</p>
+        </header>
+
+        <div class="personal-details">
+            {#each personalDetails as detail}
+                <div class="detail-item">
+                    <h3>{detail.label}</h3>
+                    <p>{detail.value}</p>
+                </div>
+            {/each}
+        </div>
+    </div>
 
     <section id="profile" class="section">
         <h2>プロフィール</h2>
@@ -103,30 +114,36 @@
 
     <section id="skills" class="section">
         <h2>スキル</h2>
-        {#each skills as skill}
-            <h3>{skill.title}</h3>
-            <p>
-                {skill.description}
-            </p>
-        {/each}
+            {#each skills as skill}
+                <div class="skill-item">
+                    <h3>{skill.title}</h3>
+                    <p>
+                        {skill.description}
+                    </p>
+                </div>
+            {/each}
     </section>
 
     <section id="projects" class="section">
         <h2>プロジェクト</h2>
-        {#each projects as project}
-            <h3>
-                <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {project.name}
-                </a>
-            </h3>
-            <p>
-                {project.description}
-            </p>
-        {/each}
+        <div class="projects-grid">
+            {#each projects as project}
+                <div class="project-item">
+                    <h3>
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {project.name}
+                        </a>
+                    </h3>
+                    <p>
+                        {project.description}
+                    </p>
+                </div>
+            {/each}
+        </div>
     </section>
 
     <section id="links" class="section">
@@ -209,7 +226,7 @@
     }
 
     main {
-        max-width: 800px;
+        max-width: 80%;
         margin: 4rem auto 0;
         padding: 2rem 1rem;
         background: #1e1e1e;
@@ -217,9 +234,17 @@
         border-radius: 8px;
     }
 
+    .hero-and-profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+
     .hero {
         text-align: center;
-        margin-bottom: 2rem;
+        flex: 1;
+        padding-right: 1rem;
     }
 
     .hero h1 {
@@ -234,17 +259,51 @@
         color: #bdbdbd;
     }
 
-    .section h2 {
+    .personal-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+        justify-content: flex-start;
+    }
+
+    .detail-item {
+        flex: 1;
+        min-width: 40%;
+    }
+
+    .detail-item h3 {
+        font-size: 1.125rem;
+        border-left: 6px solid #81c784;
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+     .section h2 {
         font-size: 1.8rem;
         border-bottom: 2px solid #81c784;
         padding-bottom: 0.3rem;
         margin-bottom: 1rem;
     }
 
-    .section h3 {
-        border-left: 6px solid;
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .skill-item, .project-item {
+      border: 1px solid #333;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .skill-item h3, .project-item h3 {
+        border-left: 6px solid #81c784;
         padding-left: 1rem;
         font-size: 1.125rem;
+        margin-bottom: 0.5rem;
     }
 
     .links li {
