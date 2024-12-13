@@ -78,7 +78,7 @@
     <meta name="description" content="sxclijさんのポートフォリオ" />
 </svelte:head>
 
-<nav class="site-navbar">
+<nav class="navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
         <li><a href="#skills">スキル</a></li>
@@ -88,18 +88,18 @@
 </nav>
 
 <main>
-    <header class="site-hero">
-        <div class="site-hero-icon-container">
+    <header class="hero">
+        <div class="hero-icon-container">
             <img src={profile.icon} alt="Profile Icon" class="profile-icon" />
         </div>
-        <div class="site-hero-content-container">
+        <div class="hero-content-container">
             <h1>{profile.name}</h1>
-            <div class="profile-info-list">
+            <div class="info-list">
                 {#each profile.info as item}
-                    <div class="profile-info-item">
-                        <div class="profile-info-text">
+                    <div class="info-item">
+                        <div class="info-text">
                             <h4>{item.label}</h4>
-                            <span class="profile-info-value">{item.value}</span>
+                            <span class="info-value">{item.value}</span>
                         </div>
                     </div>
                 {/each}
@@ -107,7 +107,7 @@
         </div>
     </header>
 
-    <section id="skills" class="site-section">
+    <section id="skills" class="section">
         <h2>スキル</h2>
         <div class="skill-list">
             {#each skills as skill}
@@ -121,7 +121,7 @@
         </div>
     </section>
 
-    <section id="projects" class="site-section">
+    <section id="projects" class="section">
         <h2>プロジェクト</h2>
         <div class="project-list">
             {#each projects as project}
@@ -143,7 +143,7 @@
         </div>
     </section>
 
-    <section id="links" class="site-section">
+    <section id="links" class="section">
         <h2>リンク</h2>
         <ul class="link-list">
             {#each links as link}
@@ -160,7 +160,7 @@
         </ul>
     </section>
 
-    <footer class="site-footer">
+    <footer class="footer">
         <p>© 2024 sxclij. All rights reserved.</p>
     </footer>
 </main>
@@ -202,7 +202,7 @@
         color: var(--accent-color);
     }
 
-    .site-navbar {
+    .navbar {
         position: fixed;
         top: 0;
         left: 0;
@@ -213,7 +213,7 @@
         z-index: 1000;
     }
 
-    .site-navbar ul {
+    .navbar ul {
         list-style: none;
         display: flex;
         justify-content: center;
@@ -221,17 +221,17 @@
         padding: 0;
     }
 
-    .site-navbar li {
+    .navbar li {
         margin: 0 1rem;
     }
 
-    .site-navbar a {
+    .navbar a {
         color: var(--primary-text-color);
         font-size: var(--font-size-base);
         transition: color 0.3s;
     }
 
-    .site-navbar a:hover {
+    .navbar a:hover {
         color: var(--accent-color);
     }
 
@@ -244,20 +244,20 @@
         border-radius: 8px;
     }
 
-    .site-hero {
+    .hero {
         display: flex;
         align-items: flex-start;
         margin-bottom: 2rem;
         padding: 1rem;
     }
-    .site-hero-icon-container {
+    .hero-icon-container {
         flex: 0 0 auto;
         margin-right: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .site-hero-content-container {
+    .hero-content-container {
         flex: 1;
         text-align: left;
     }
@@ -269,51 +269,51 @@
         object-fit: cover;
     }
 
-    .site-hero h1 {
+    .hero h1 {
         margin: 0;
         font-size: 2.5rem;
         color: var(--accent-color);
     }
 
-    .site-hero p {
+    .hero p {
         margin: 0.5rem 0 0;
         font-size: 1.2rem;
         color: var(--secondary-text-color);
     }
-    .profile-info-list {
+    .info-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
         max-width: 100%;
     }
 
-    .profile-info-item {
+    .info-item {
         background-color: var(--item-background-color);
         padding: 0.5rem;
         border-radius: 4px;
         box-sizing: border-box;
     }
-    .profile-info-text {
+    .info-text {
         display: flex;
         flex-direction: column;
     }
-    .profile-info-item h4 {
+    .info-item h4 {
         font-size: 1.1rem;
         font-weight: bold;
         margin: 0 0 0.2rem 0;
     }
 
-    .site-section {
+    .section {
         margin-bottom: 2rem;
     }
 
-    .site-section h2 {
+    .section h2 {
         font-size: var(--font-size-h2);
         border-bottom: 2px solid var(--accent-color);
         padding-bottom: 0.3rem;
         margin-bottom: 1rem;
     }
-    .site-section p {
+    .section p {
         margin-bottom: 0.5rem;
     }
 
@@ -344,20 +344,20 @@
     .link-list li {
         margin-bottom: 0.5rem;
     }
-    .site-footer {
+    .footer {
         text-align: center;
         margin-top: 2rem;
         font-size: 0.9rem;
         color: #e7e7e7;
     }
     @media (max-width: 768px) {
-        .site-navbar {
+        .navbar {
             display: none;
         }
-        .site-hero {
+        .hero {
             flex-direction: column;
         }
-        .site-hero-icon-container {
+        .hero-icon-container {
             margin-right: 0;
             margin-bottom: 1rem;
             width: 100%;
@@ -365,19 +365,19 @@
             align-items: center;
             justify-content: center;
         }
-        .site-hero-content-container {
+        .hero-content-container {
             width: 100%;
         }
         .profile-icon {
             width: 30%;
             height: 30%;
         }
-        .profile-info-list,
+        .info-list,
         .skill-list,
         .project-list {
             grid-template-columns: 1fr;
         }
-        .profile-info-item {
+        .info-item {
             max-width: 100%;
         }
     }
