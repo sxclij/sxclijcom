@@ -13,7 +13,6 @@
             value: "読書 / 音ゲー / nostr",
         },
     ];
-
     const skills = [
         {
             title: "C言語",
@@ -36,7 +35,6 @@
                 "始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。流れとしては 生のHTMLファイル > React > Svelteという感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。",
         },
     ];
-
     const projects = [
         {
             name: "テキストエディタ",
@@ -51,7 +49,6 @@
                 "自作プログラミング言語を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。",
         },
     ];
-
     const links = [
         {
             name: "Qiita: sxclij",
@@ -88,22 +85,10 @@
 </nav>
 
 <main>
-    <div class="hero-and-profile">
-        <header class="hero">
-            <img alt="icon" src=/icon.svg />
-        </header>
-
-        <div class="personal-details">
-            <h1>sxclij</h1>
-            <p>Student Developer</p>
-            {#each personalDetails as detail}
-                <div class="detail-item">
-                    <h3>{detail.label}</h3>
-                    <p>{detail.value}</p>
-                </div>
-            {/each}
-        </div>
-    </div>
+    <header class="hero">
+        <h1>sxclij</h1>
+        <p>Student Developer | 自作言語・テキストエディタ開発者</p>
+    </header>
 
     <section id="profile" class="section">
         <h2>プロフィール</h2>
@@ -115,36 +100,30 @@
 
     <section id="skills" class="section">
         <h2>スキル</h2>
-            {#each skills as skill}
-                <div class="skill-item">
-                    <h3>{skill.title}</h3>
-                    <p>
-                        {skill.description}
-                    </p>
-                </div>
-            {/each}
+        {#each skills as skill}
+            <h3>{skill.title}</h3>
+            <p>
+                {skill.description}
+            </p>
+        {/each}
     </section>
 
     <section id="projects" class="section">
         <h2>プロジェクト</h2>
-        <div class="projects-grid">
-            {#each projects as project}
-                <div class="project-item">
-                    <h3>
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {project.name}
-                        </a>
-                    </h3>
-                    <p>
-                        {project.description}
-                    </p>
-                </div>
-            {/each}
-        </div>
+        {#each projects as project}
+            <h3>
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {project.name}
+                </a>
+            </h3>
+            <p>
+                {project.description}
+            </p>
+        {/each}
     </section>
 
     <section id="links" class="section">
@@ -227,7 +206,7 @@
     }
 
     main {
-        max-width: 80%;
+        max-width: 800px;
         margin: 4rem auto 0;
         padding: 2rem 1rem;
         background: #1e1e1e;
@@ -235,16 +214,9 @@
         border-radius: 8px;
     }
 
-    .hero-and-profile {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-    }
-
     .hero {
         text-align: center;
-        flex: 1;
-        padding-right: 1rem;
+        margin-bottom: 2rem;
     }
 
     .hero h1 {
@@ -259,51 +231,17 @@
         color: #bdbdbd;
     }
 
-    .personal-details {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 0;
-        justify-content: flex-start;
-        flex: 1;
-    }
-
-    .detail-item {
-        flex: 1;
-    }
-
-    .detail-item h3 {
-        font-size: 1.125rem;
-        border-left: 6px solid #81c784;
-        padding-left: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-     .section h2 {
+    .section h2 {
         font-size: 1.8rem;
         border-bottom: 2px solid #81c784;
         padding-bottom: 0.3rem;
         margin-bottom: 1rem;
     }
 
-    .skills-grid, .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-bottom: 2rem;
-    }
-
-    .skill-item, .project-item {
-      border: 1px solid #333;
-      padding: 1rem;
-      border-radius: 4px;
-    }
-
-    .skill-item h3, .project-item h3 {
-        border-left: 6px solid #81c784;
+    .section h3 {
+        border-left: 6px solid;
         padding-left: 1rem;
         font-size: 1.125rem;
-        margin-bottom: 0.5rem;
     }
 
     .links li {
@@ -315,20 +253,5 @@
         margin-top: 2rem;
         font-size: 0.9rem;
         color: #e7e7e7;
-    }
-    
-    @media (max-width: 768px) {
-        .hero-and-profile {
-            flex-direction: column;
-        }
-        .hero {
-            text-align: center;
-            padding-right: 0;
-        }
-        .personal-details {
-            flex-wrap: nowrap;
-            text-align: center;
-        }
-        
     }
 </style>
