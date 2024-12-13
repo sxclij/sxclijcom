@@ -1,55 +1,43 @@
+<svelte:head>
+    <title>sxclij.com</title>
+    <meta
+        name="description"
+        content="sxclijさんのポートフォリオ"
+    />
+</svelte:head>
+
 <script>
-    const navLinks = [
-        { href: "", text: "sxclij.com" },
-        { href: "#profile", text: "プロフィール" },
-        { href: "#skills", text: "スキル" },
-        { href: "#projects", text: "プロジェクト" },
-        { href: "#links", text: "リンク" },
-    ];
-    const projects = [
+    const skills = [
         {
-            title: "テキストエディタ",
+            title: "C言語",
             description:
-                'C言語を使用して、とてもコンパクトな<a href="https://github.com/sxclij/sxceditor2" target="_blank" rel="noopener noreferrer">テキストエディタ</a>を開発しています。',
+                "一番経験年数が長く、一番得意で、一番好みの言語です。動的メモリ確保や外部ライブラリを縛りつつ、自作言語、UEFIアプリケーション、テキストエディタ、webサイトなどを作ってきました。小学生の頃から触ってきましたが、中学の頃に一度ソースコードを全て失ってしまったので、実際に持っている知識に対してGitHubに上げている成果物が少ない言語でもあります。",
         },
         {
-            title: "自作プログラミング言語",
+            title: "インフラ",
             description:
-                '<a href="https://github.com/sxclij/sxcscript" target="_blank" rel="noopener noreferrer">自作プログラミング言語</a>を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。',
-        },
-    ];
-    const links = [
-        {
-            href: "https://qiita.com/sxclij",
-            text: "Qiita: sxclij",
+                "自宅のサーバーでMinecraftやArkなどゲームのサーバー、このウェブサイトや家族の写真サーバーを立てたり保守したりしています。特に、ArchLinux、VirtualBox、DockerCompose、Sambaなどを好んで触っています。",
         },
         {
-            href: "https://github.com/sxclij",
-            text: "GitHub: sxclij",
+            title: "Webバックエンド",
+            description:
+                "個人的にはC++、TypeScript、Go、Rustが好みですが、必要に迫られてJavaScript、PHP、Pythonなどを触ったりもします。最近は設計とチューニング以外はLLMに任せっきりで、ほとんど確認作業のようになっている分野でもあります。",
         },
         {
-            href: "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F",
-            text: "Pagespeed: sxclij.com",
-        },
-        {
-            href: "https://discord.gg/yFtY7ym4DA",
-            text: "Discord: sxclij-server",
+            title: "Webフロントエンド",
+            description:
+                "始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。流れとしては 生のHTMLファイル > React > Svelteという感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。",
         },
     ];
 </script>
 
-<svelte:head>
-    <title>sxclij.com</title>
-    <meta name="description" content="sxclijさんのポートフォリオ" />
-</svelte:head>
-
 <nav class="navbar">
     <ul>
-        {#each navLinks as { href, text }}
-            <li>
-                <a {href} aria-label={text} class="nav-link">{text}</a>
-            </li>
-        {/each}
+        <li><a href="/">sxclij.com</a></li>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#skills">スキル</a></li>
+        <li><a href="#projects">プロジェクト</a></li>
+        <li><a href="#links">リンク</a></li>
     </ul>
 </nav>
 
@@ -69,60 +57,81 @@
 
     <section id="skills" class="section">
         <h2>スキル</h2>
-
-        <h3>C言語</h3>
-        <p>
-            一番経験年数が長く、一番得意で、一番好みの言語です。
-            動的メモリ確保や外部ライブラリを縛りつつ、自作言語、UEFIアプリケーション、テキストエディタ、webサイトなどを作ってきました。
-            小学生の頃から触ってきましたが、中学の頃に一度ソースコードを全て失ってしまったので、実際に持っている知識に対してGitHubに上げている成果物が少ない言語でもあります。
-        </p>
-
-        <h3>インフラ</h3>
-        <p>
-            自宅のサーバーでMinecraftやArkなどゲームのサーバー、このウェブサイトや家族の写真サーバーを立てたり保守したりしています。
-            特に、ArchLinux、VirtualBox、DockerCompose、Sambaなどを好んで触っています。
-        </p>
-
-        <h3>Webバックエンド</h3>
-        <p>
-            個人的にはC++、TypeScript、Go、Rustが好みですが、必要に迫られてJavaScript、PHP、Pythonなどを触ったりもします。
-            最近は設計とチューニング以外はLLMに任せっきりで、ほとんど確認作業のようになっている分野でもあります。
-        </p>
-
-        <h3>Webフロントエンド</h3>
-        <p>
-            始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。
-            流れとしては 生のHTMLファイル > React > Svelte
-            という感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。
-            数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。
-        </p>
+        {#each skills as skill}
+            <h3>{skill.title}</h3>
+            <p>
+                {skill.description}
+            </p>
+        {/each}
     </section>
 
     <section id="projects" class="section">
         <h2>プロジェクト</h2>
         <ul>
-            {#each projects as { title, description }}
-                <li>
-                    <h3>{title}</h3>
-                    <p>{@html description}</p>
-                </li>
-            {/each}
+            <li>
+                <h3>テキストエディタ</h3>
+                <p>
+                    C言語を使用して、とてもコンパクトな
+                    <a
+                        href="https://github.com/sxclij/sxceditor2"
+                        target="_blank"
+                        rel="noopener noreferrer">テキストエディタ</a
+                    >を開発しています。
+                </p>
+            </li>
+            <li>
+                <h3>自作プログラミング言語</h3>
+                <p>
+                    <a
+                        href="https://github.com/sxclij/sxcscript"
+                        target="_blank"
+                        rel="noopener noreferrer">自作プログラミング言語</a
+                    >
+                    を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。
+                </p>
+            </li>
         </ul>
     </section>
 
     <section id="links" class="section">
         <h2>リンク</h2>
         <ul class="links">
-            {#each links as { href, text }}
-                <li>
-                    <a
-                        {href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="link-item">{text}</a
-                    >
-                </li>
-            {/each}
+            <li>
+                <a
+                    href="https://qiita.com/sxclij"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Qiita: sxclij
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://github.com/sxclij"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub: sxclij
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Pagespeed: sxclij.com
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://discord.gg/yFtY7ym4DA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Discord: sxclij-server
+                </a>
+            </li>
         </ul>
     </section>
 
@@ -178,13 +187,13 @@
         margin: 0 1rem;
     }
 
-    .nav-link {
+    .navbar a {
         color: #e0e0e0;
         font-size: 1rem;
         transition: color 0.3s;
     }
 
-    .nav-link:hover {
+    .navbar a:hover {
         color: #81c784;
     }
 
@@ -227,12 +236,6 @@
 
     .links li {
         margin-bottom: 0.5rem;
-    }
-
-    .link-item {
-        display: inline-block;
-        width: 100%;
-        text-align: left;
     }
 
     .footer {
