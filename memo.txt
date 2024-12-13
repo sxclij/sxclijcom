@@ -9,6 +9,11 @@ Head:{
 navbar:{
     Sections
 }
+Links:{
+    GitHub:https://github.com/sxclij
+    Qiita:https://qiita.com/sxclij
+    Discord:https://discord.gg/yFtY7ym4DA
+}
 Sections:{
     Profile:{
         sxclijです。スクさんと呼ばれています。C言語やScratch、Minecraftのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とする学生エンジニアです。自作言語や、テキストエディタをC言語で書いたりしてます。一応Webやインフラなども触れます。

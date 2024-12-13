@@ -2,13 +2,15 @@
     <title>sxclij.com</title>
     <meta
         name="description"
-        content="主に自作言語の開発や、独自のテキストエディタをC言語で構築するプロジェクトに注力しています。"
+        content="sxclijさんのポートフォリオ"
     />
 </svelte:head>
 
 <nav class="navbar">
     <ul>
+        <li><a href="">sxclij.com</a></li>
         <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#skills">スキル</a></li>
         <li><a href="#projects">プロジェクト</a></li>
         <li><a href="#links">リンク</a></li>
     </ul>
@@ -23,8 +25,39 @@
     <section id="profile" class="section">
         <h2>プロフィール</h2>
         <p>
-            sxclijです。スクさんと呼ばれています。C言語やScratch、マインクラフトのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とするエンジニアです。
-            主に自作言語の開発や、独自のテキストエディタをC言語で構築するプロジェクトに注力しています。
+            sxclijです。スクさんと呼ばれています。C言語やScratch、Minecraftのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とする学生エンジニアです。
+            自作言語や、テキストエディタをC言語で書いたりしてます。一応Webやインフラなども触れます。
+        </p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>スキル</h2>
+
+        <h3>C言語</h3>
+        <p>
+            一番経験年数が長く、一番得意で、一番好みの言語です。
+            動的メモリ確保や外部ライブラリを縛りつつ、自作言語、UEFIアプリケーション、テキストエディタ、webサイトなどを作ってきました。
+            小学生の頃から触ってきましたが、中学の頃に一度ソースコードを全て失ってしまったので、実際に持っている知識に対してGitHubに上げている成果物が少ない言語でもあります。
+        </p>
+
+        <h3>インフラ</h3>
+        <p>
+            自宅のサーバーでMinecraftやArkなどゲームのサーバー、このウェブサイトや家族の写真サーバーを立てたり保守したりしています。
+            特に、ArchLinux、VirtualBox、DockerCompose、Sambaなどを好んで触っています。
+        </p>
+
+        <h3>Webバックエンド</h3>
+        <p>
+            個人的にはC++、TypeScript、Go、Rustが好みですが、必要に迫られてJavaScript、PHP、Pythonなどを触ったりもします。
+            最近は設計とチューニング以外はLLMに任せっきりで、ほとんど確認作業のようになっている分野でもあります。
+        </p>
+
+        <h3>Webフロントエンド</h3>
+        <p>
+            始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。
+            流れとしては 生のHTMLファイル > React > Svelte
+            という感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。
+            数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。
         </p>
     </section>
 
@@ -32,7 +65,7 @@
         <h2>プロジェクト</h2>
         <ul>
             <li>
-                <h3>テキストエディタの開発</h3>
+                <h3>テキストエディタ</h3>
                 <p>
                     C言語を使用して、とてもコンパクトな
                     <a
@@ -45,7 +78,6 @@
             <li>
                 <h3>自作プログラミング言語</h3>
                 <p>
-                    趣味として
                     <a
                         href="https://github.com/sxclij/sxcscript"
                         target="_blank"
