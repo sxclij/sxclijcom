@@ -18,7 +18,7 @@
         {
             title: "Webフロントエンド",
             description:
-                "始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。流れとしては 生のHTMLファイル -> React -> Svelteという感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。",
+                "始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。流れとしては 生のHTMLファイル > React > Svelteという感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。",
         },
     ];
 
@@ -34,6 +34,25 @@
             link: "https://github.com/sxclij/sxcscript",
             description:
                 "自作プログラミング言語を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。",
+        },
+    ];
+
+    const links = [
+        {
+            name: "Qiita: sxclij",
+            url: "https://qiita.com/sxclij",
+        },
+        {
+            name: "GitHub: sxclij",
+            url: "https://github.com/sxclij",
+        },
+        {
+            name: "Pagespeed: sxclij.com",
+            url: "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F",
+        },
+        {
+            name: "Discord: sxclij-server",
+            url: "https://discord.gg/yFtY7ym4DA",
         },
     ];
 </script>
@@ -98,42 +117,17 @@
     <section id="links" class="section">
         <h2>リンク</h2>
         <ul class="links">
-            <li>
-                <a
-                    href="https://qiita.com/sxclij"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Qiita: sxclij
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://github.com/sxclij"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub: sxclij
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Pagespeed: sxclij.com
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://discord.gg/yFtY7ym4DA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Discord: sxclij-server
-                </a>
-            </li>
+            {#each links as link}
+                <li>
+                    <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {link.name}
+                    </a>
+                </li>
+            {/each}
         </ul>
     </section>
 
