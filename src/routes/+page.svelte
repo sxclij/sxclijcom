@@ -77,7 +77,6 @@
     <title>sxclij.com</title>
     <meta name="description" content="sxclijさんのポートフォリオ" />
 </svelte:head>
-
 <nav class="navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
@@ -86,7 +85,6 @@
         <li><a href="#links">リンク</a></li>
     </ul>
 </nav>
-
 <main>
     <header class="hero">
         <div class="hero-icon-container">
@@ -106,7 +104,6 @@
             </div>
         </div>
     </header>
-
     <section id="skills" class="section">
         <h2>スキル</h2>
         <div class="skill-list">
@@ -120,7 +117,6 @@
             {/each}
         </div>
     </section>
-
     <section id="projects" class="section">
         <h2>プロジェクト</h2>
         <div class="project-list">
@@ -142,7 +138,6 @@
             {/each}
         </div>
     </section>
-
     <section id="links" class="section">
         <h2>リンク</h2>
         <ul class="link-list">
@@ -159,7 +154,6 @@
             {/each}
         </ul>
     </section>
-
     <footer class="footer">
         <p>© 2024 sxclij. All rights reserved.</p>
     </footer>
@@ -178,7 +172,6 @@
         --font-size-h2: 1.8rem;
         --font-size-h3: 1.125rem;
     }
-
     :global(body) {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -187,21 +180,17 @@
         background-color: var(--background-color);
         color: var(--primary-text-color);
     }
-
     :global(a) {
         color: var(--link-color);
         text-decoration: none;
         font-weight: bold;
     }
-
     :global(a:hover) {
         text-decoration: underline;
     }
-
     :global(a:visited) {
         color: var(--accent-color);
     }
-
     .navbar {
         position: fixed;
         top: 0;
@@ -212,7 +201,6 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         z-index: 1000;
     }
-
     .navbar ul {
         list-style: none;
         display: flex;
@@ -220,21 +208,17 @@
         margin: 0;
         padding: 0;
     }
-
     .navbar li {
         margin: 0 1rem;
     }
-
     .navbar a {
         color: var(--primary-text-color);
         font-size: var(--font-size-base);
         transition: color 0.3s;
     }
-
     .navbar a:hover {
         color: var(--accent-color);
     }
-
     main {
         max-width: 85%;
         margin: 4rem auto 0;
@@ -243,7 +227,6 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
     }
-
     .hero {
         display: flex;
         align-items: flex-start;
@@ -261,20 +244,17 @@
         flex: 1;
         text-align: left;
     }
-
     .profile-icon {
         width: 50%;
         height: 50%;
         border-radius: 50%;
         object-fit: cover;
     }
-
     .hero h1 {
         margin: 0;
         font-size: 2.5rem;
         color: var(--accent-color);
     }
-
     .hero p {
         margin: 0.5rem 0 0;
         font-size: 1.2rem;
@@ -286,7 +266,6 @@
         gap: 1rem;
         max-width: 100%;
     }
-
     .info-item {
         background-color: var(--item-background-color);
         padding: 0.5rem;
@@ -302,11 +281,9 @@
         font-weight: bold;
         margin: 0 0 0.2rem 0;
     }
-
     .section {
         margin-bottom: 2rem;
     }
-
     .section h2 {
         font-size: var(--font-size-h2);
         border-bottom: 2px solid var(--accent-color);
@@ -316,31 +293,26 @@
     .section p {
         margin-bottom: 0.5rem;
     }
-
     .skill-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-
     .skill-item h3 {
         border-left: 6px solid;
         padding-left: 1rem;
         font-size: var(--font-size-h3);
     }
-
     .project-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-
     .project-item h3 {
         border-left: 6px solid;
         padding-left: 1rem;
         font-size: var(--font-size-h3);
     }
-
     .link-list li {
         margin-bottom: 0.5rem;
     }
