@@ -72,11 +72,11 @@
         },
     ];
 </script>
-
 <svelte:head>
     <title>sxclij.com</title>
     <meta name="description" content="sxclijさんのポートフォリオ" />
 </svelte:head>
+
 <nav class="navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
@@ -96,7 +96,7 @@
                 {#each profile.info as item}
                     <div class="info-item">
                         <div class="info-text">
-                            <h4>{item.label}</h4>
+                            <h2>{item.label}</h2>
                             <span class="info-value">{item.value}</span>
                         </div>
                     </div>
@@ -158,7 +158,6 @@
         <p>© 2024 sxclij. All rights reserved.</p>
     </footer>
 </main>
-
 <style>
     :root {
         --primary-text-color: #e0e0e0;
@@ -276,7 +275,7 @@
         display: flex;
         flex-direction: column;
     }
-    .info-item h4 {
+    .info-item h2 {
         font-size: 1.1rem;
         font-weight: bold;
         margin: 0 0 0.2rem 0;
