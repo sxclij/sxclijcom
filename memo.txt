@@ -1,9 +1,14 @@
-Meta:{
-    主に自作言語の開発や、独自のテキストエディタをC言語で構築するプロジェクトに注力しています。
+Head:{
+    Title:{
+        sxclij.com
+    }
+    Meta:{
+        sxclijです。スクさんと呼ばれています。主に自作言語の開発や、独自のテキストエディタをC言語で構築するプロジェクトに注力しています。
+    }
 }
 Sections:{
     Profile:{
-        sxclijです。スクさんと呼ばれています。C言語やScratch、Minecraftのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とする学生エンジニアです。自作言語の開発や独自のテキストエディタをC言語で構築するプロジェクトに注力しています。最近はSvelteやWASM、Goなど新しいものにも手を出しています。
+        sxclijです。スクさんと呼ばれています。C言語やScratch、Minecraftのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とする学生エンジニアです。自作言語の開発や独自のテキストエディタをC言語で構築するプロジェクトに注力しています。Web全般、インフラなども触れます。
     }
     Skills:{
         C言語:{
@@ -13,7 +18,7 @@ Sections:{
         }
         インフラ:{
             自宅のサーバーでMinecraftやArkなどゲームのサーバー、このウェブサイトや家族の写真サーバーを立てたり保守したりしています。
-            特に、ArchLinux、VirtualBox、docker、samba、DuckDBなどを好んで触っています。
+            特に、ArchLinux、VirtualBox、Docker、Samba、DuckDBなどを好んで触っています。
         }
         webバックエンド:{
             個人的にはC++、TypeScript、Go、Rustが好みですが、必要に迫られてJavaScript、PHP、Pythonなどを触ったりもします。
