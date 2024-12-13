@@ -1,18 +1,22 @@
 <script>
-    const tips = [
-        {
-            label: "所属",
-            value: "無所属 / 無職",
-        },
-        {
-            label: "好きな言語",
-            value: "C / go / rust",
-        },
-        {
-            label: "趣味",
-            value: "読書 / 音ゲー / nostr",
-        },
-    ];
+    const profile = {
+        icon: "/icon.svg",
+        name: "sxclij",
+        info: [
+            {
+                label:"所属",
+                value: "無所属 / 無職",
+            },
+            {
+                label:"好きな言語",
+                value: "C / Go / Rust",
+            },
+            {
+                label:"趣味",
+                value: "読書 / 音ゲー / Nostr",
+            },
+        ],
+    };
     const skills = [
         {
             title: "C言語",
@@ -86,17 +90,21 @@
 
 <main>
     <header class="hero">
-        <h1>sxclij</h1>
-        <p>Student Developer | 自作言語・テキストエディタ開発者</p>
+        <div class="hero-icon">
+             <img src={profile.icon} alt="Profile Icon" class="profile-icon">
+        </div>
+        <div class="hero-info">
+            <h1>{profile.name}</h1>
+            <div class="info-list">
+                {#each profile.info as item}
+                    <div class="info-item">
+                        <h4>{item.label}</h4>
+                        <span class="info-value">{item.value}</span>
+                    </div>
+                {/each}
+            </div>
+        </div>
     </header>
-
-    <section id="profile" class="section">
-        <h2>プロフィール</h2>
-        <p>
-            sxclijです。スクさんと呼ばれています。C言語やScratch、Minecraftのコマンドなど、制約の強い環境下でのプログラム開発に取り組むことを得意とする学生エンジニアです。
-            自作言語や、テキストエディタをC言語で書いたりしてます。一応Webやインフラなども触れます。
-        </p>
-    </section>
 
     <section id="skills" class="section">
         <h2>スキル</h2>
@@ -206,7 +214,7 @@
     }
 
     main {
-        max-width: 800px;
+        max-width: 85%;
         margin: 4rem auto 0;
         padding: 2rem 1rem;
         background: #1e1e1e;
@@ -215,8 +223,30 @@
     }
 
     .hero {
-        text-align: center;
+        display: flex;
+        align-items: flex-start; /* 上揃えに変更 */
         margin-bottom: 2rem;
+        padding: 1rem;
+    }
+
+    .hero-icon {
+        flex: 0 0 auto;
+        margin-right: 2rem; /* アイコンと情報の間にマージンを追加 */
+        display: flex;
+        align-items: center;
+         justify-content: center;
+    }
+    
+     .hero-info {
+        flex: 1;
+        text-align: left;
+    }
+
+    .profile-icon {
+        width: 50%; /* アイコンのサイズを調整 */
+        height: 50%;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     .hero h1 {
@@ -230,6 +260,22 @@
         font-size: 1.2rem;
         color: #bdbdbd;
     }
+     .info-list {
+         display: flex;
+         flex-direction: column;
+     }
+     .info-item {
+        margin-bottom: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-item h4 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 0 0 0.2rem 0;
+    }
+
 
     .section h2 {
         font-size: 1.8rem;
