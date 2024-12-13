@@ -1,5 +1,5 @@
 <script>
-    const personalDetails = [
+    const tips = [
         {
             label: "所属",
             value: "無所属 / 無職",
