@@ -1,9 +1,5 @@
-<script>
-    import { writable } from "svelte/store";
-</script>
-
 <svelte:head>
-    <title>sxclij - Portfolio</title>
+    <title>sxclij.com</title>
     <meta
         name="description"
         content="C言語やScratch、マインクラフトのコマンドを活用し、自作言語の開発に取り組むsxclijさんのポートフォリオです。"
