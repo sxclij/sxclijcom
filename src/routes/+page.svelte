@@ -26,7 +26,22 @@
         {
             title: "Webフロントエンド",
             description:
-                "始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。流れとしては 生のHTMLファイル > React > Svelteという感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。",
+                "始めてから一番日が浅い分野です。特に生のHTMLファイルを触ることを得意としています。流れとしては 生のHTMLファイル -> React -> Svelteという感じで、流行に乗ってReactを触ろうとしたものの、パフォーマンスが思うように出ずSvelteに流れ着きました。数年前までは必要に迫られて嫌々書いていましたが、最近はChatGPTやClaudeと会話しながら楽しく書けるようになってきました。",
+        },
+    ];
+
+    const projects = [
+        {
+            name: "テキストエディタ",
+            link: "https://github.com/sxclij/sxceditor2",
+            description:
+                "C言語を使用して、とてもコンパクトなテキストエディタを開発しています。",
+        },
+        {
+            name: "自作プログラミング言語",
+            link: "https://github.com/sxclij/sxcscript",
+            description:
+                "自作プログラミング言語を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。",
         },
     ];
 </script>
@@ -67,30 +82,16 @@
 
     <section id="projects" class="section">
         <h2>プロジェクト</h2>
-        <ul>
-            <li>
-                <h3>テキストエディタ</h3>
-                <p>
-                    C言語を使用して、とてもコンパクトな
-                    <a
-                        href="https://github.com/sxclij/sxceditor2"
-                        target="_blank"
-                        rel="noopener noreferrer">テキストエディタ</a
-                    >を開発しています。
-                </p>
-            </li>
-            <li>
-                <h3>自作プログラミング言語</h3>
-                <p>
-                    <a
-                        href="https://github.com/sxclij/sxcscript"
-                        target="_blank"
-                        rel="noopener noreferrer">自作プログラミング言語</a
-                    >
-                    を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。
-                </p>
-            </li>
-        </ul>
+        {#each projects as project}
+            <h3>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    {project.name}
+                </a>
+            </h3>
+            <p>
+                {project.description}
+            </p>
+        {/each}
     </section>
 
     <section id="links" class="section">
@@ -164,7 +165,7 @@
         color: #81c784;
     }
 
-    .navbar {
+     .navbar {
         position: fixed;
         top: 0;
         left: 0;
