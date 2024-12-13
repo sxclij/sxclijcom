@@ -1,4 +1,19 @@
 <script>
+    const profiles = [
+        {
+            title: "所属",
+            description: "無所属 / 無職",
+        },
+        {
+            title: "好きな言語",
+            description: "C / go / rust",
+        },
+        {
+            title: "趣味",
+            description: "読書 / 音ゲー / nostr",
+        },
+    ];
+
     const skills = [
         {
             title: "C言語",
