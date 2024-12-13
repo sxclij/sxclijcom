@@ -4,15 +4,15 @@
         name: "sxclij",
         info: [
             {
-                label:"所属",
+                label: "所属",
                 value: "無所属 / 無職",
             },
             {
-                label:"好きな言語",
+                label: "好きな言語",
                 value: "C / Go / Rust",
             },
             {
-                label:"趣味",
+                label: "趣味",
                 value: "読書 / 音ゲー / Nostr",
             },
         ],
@@ -81,7 +81,6 @@
 <nav class="navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
-        <li><a href="#profile">プロフィール</a></li>
         <li><a href="#skills">スキル</a></li>
         <li><a href="#projects">プロジェクト</a></li>
         <li><a href="#links">リンク</a></li>
@@ -90,9 +89,9 @@
 
 <main>
     <header class="hero">
-         <div class="hero-icon-container">
-             <img src={profile.icon} alt="Profile Icon" class="profile-icon">
-         </div>
+        <div class="hero-icon-container">
+            <img src={profile.icon} alt="Profile Icon" class="profile-icon" />
+        </div>
         <div class="hero-content-container">
             <h1>{profile.name}</h1>
             <div class="info-list">
@@ -167,17 +166,30 @@
 </main>
 
 <style>
+    :root {
+        --primary-text-color: #e0e0e0;
+        --secondary-text-color: #bdbdbd;
+        --accent-color: #81c784;
+        --link-color: #64b5f6;
+        --background-color: #121212;
+        --card-background-color: #1e1e1e;
+        --item-background-color: #282828;
+        --font-size-base: 1rem;
+        --font-size-h2: 1.8rem;
+        --font-size-h3: 1.125rem;
+    }
+
     :global(body) {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         line-height: 1.6;
-        background-color: #121212;
-        color: #e0e0e0;
+        background-color: var(--background-color);
+        color: var(--primary-text-color);
     }
 
     :global(a) {
-        color: #64b5f6;
+        color: var(--link-color);
         text-decoration: none;
         font-weight: bold;
     }
@@ -187,7 +199,7 @@
     }
 
     :global(a:visited) {
-        color: #81c784;
+        color: var(--accent-color);
     }
 
     .navbar {
@@ -195,7 +207,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background: #1e1e1e;
+        background: var(--card-background-color);
         padding: 0.5rem 1rem;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         z-index: 1000;
@@ -214,20 +226,20 @@
     }
 
     .navbar a {
-        color: #e0e0e0;
-        font-size: 1rem;
+        color: var(--primary-text-color);
+        font-size: var(--font-size-base);
         transition: color 0.3s;
     }
 
     .navbar a:hover {
-        color: #81c784;
+        color: var(--accent-color);
     }
 
     main {
         max-width: 85%;
         margin: 4rem auto 0;
         padding: 2rem 1rem;
-        background: #1e1e1e;
+        background: var(--card-background-color);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
     }
@@ -239,19 +251,19 @@
         padding: 1rem;
     }
     .hero-icon-container {
-      flex: 0 0 auto;
-      margin-right: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        flex: 0 0 auto;
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .hero-content-container{
-       flex: 1;
-       text-align: left;
+    .hero-content-container {
+        flex: 1;
+        text-align: left;
     }
 
     .profile-icon {
-        width: 50%; /* アイコンのサイズを調整 */
+        width: 50%;
         height: 50%;
         border-radius: 50%;
         object-fit: cover;
@@ -260,29 +272,29 @@
     .hero h1 {
         margin: 0;
         font-size: 2.5rem;
-        color: #81c784;
+        color: var(--accent-color);
     }
 
     .hero p {
         margin: 0.5rem 0 0;
         font-size: 1.2rem;
-        color: #bdbdbd;
+        color: var(--secondary-text-color);
     }
     .info-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
-          max-width: 100%;
+        max-width: 100%;
     }
 
     .info-item {
-        background-color: #282828;
+        background-color: var(--item-background-color);
         padding: 0.5rem;
         border-radius: 4px;
         box-sizing: border-box;
     }
     .info-text {
-         display: flex;
+        display: flex;
         flex-direction: column;
     }
     .info-item h4 {
@@ -290,81 +302,83 @@
         font-weight: bold;
         margin: 0 0 0.2rem 0;
     }
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .section h2 {
+        font-size: var(--font-size-h2);
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.3rem;
+        margin-bottom: 1rem;
+    }
+    .section p {
+        margin-bottom: 0.5rem;
+    }
+
     .skills-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    .skill-item {
-       
-    }
-    .section h2 {
-        font-size: 1.8rem;
-        border-bottom: 2px solid #81c784;
-        padding-bottom: 0.3rem;
-        margin-bottom: 1rem;
-    }
 
     .skill-item h3 {
-          border-left: 6px solid;
-          padding-left: 1rem;
-         font-size: 1.125rem;
+        border-left: 6px solid;
+        padding-left: 1rem;
+        font-size: var(--font-size-h3);
     }
+
     .projects-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    .project-item {
-       
-    }
+
     .project-item h3 {
-          border-left: 6px solid;
-          padding-left: 1rem;
-         font-size: 1.125rem;
+        border-left: 6px solid;
+        padding-left: 1rem;
+        font-size: var(--font-size-h3);
     }
-    .section p {
-          margin-bottom: 0.5rem;
-    }
+
     .links li {
         margin-bottom: 0.5rem;
     }
-
     .footer {
         text-align: center;
         margin-top: 2rem;
         font-size: 0.9rem;
         color: #e7e7e7;
     }
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
         .navbar {
-          display: none;
+            display: none;
         }
         .hero {
-             flex-direction: column;
-         }
+            flex-direction: column;
+        }
         .hero-icon-container {
             margin-right: 0;
             margin-bottom: 1rem;
             width: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .hero-content-container {
-             width: 100%;
+            width: 100%;
         }
         .profile-icon {
-             width: 30%;
-             height: 30%;
+            width: 30%;
+            height: 30%;
         }
-          .info-list,
+        .info-list,
         .skills-list,
         .projects-list {
-             grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
         }
-         .info-item {
-             max-width: 100%; /* モバイル時はフル幅に */
+        .info-item {
+            max-width: 100%;
         }
     }
 </style>
