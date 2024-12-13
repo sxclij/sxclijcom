@@ -2,7 +2,7 @@
     <title>sxclij.com</title>
     <meta
         name="description"
-        content="C言語やScratch、マインクラフトのコマンドを活用し、自作言語の開発に取り組むsxclijさんのポートフォリオです。"
+        content="主に自作言語の開発や、独自のテキストエディタをC言語で構築するプロジェクトに注力しています。"
     />
 </svelte:head>
 
