@@ -90,11 +90,12 @@
 <main>
     <div class="hero-and-profile">
         <header class="hero">
-            <h1>sxclij</h1>
-            <p>Student Developer</p>
+            <img alt="icon" src=/icon.svg />
         </header>
 
         <div class="personal-details">
+            <h1>sxclij</h1>
+            <p>Student Developer</p>
             {#each personalDetails as detail}
                 <div class="detail-item">
                     <h3>{detail.label}</h3>
@@ -236,8 +237,7 @@
 
     .hero-and-profile {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         margin-bottom: 2rem;
     }
 
@@ -263,13 +263,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        margin-top: 1rem;
+        margin-top: 0;
         justify-content: flex-start;
+        flex: 1;
     }
 
     .detail-item {
         flex: 1;
-        min-width: 40%;
     }
 
     .detail-item h3 {
@@ -315,5 +315,20 @@
         margin-top: 2rem;
         font-size: 0.9rem;
         color: #e7e7e7;
+    }
+    
+    @media (max-width: 768px) {
+        .hero-and-profile {
+            flex-direction: column;
+        }
+        .hero {
+            text-align: center;
+            padding-right: 0;
+        }
+        .personal-details {
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+        
     }
 </style>
