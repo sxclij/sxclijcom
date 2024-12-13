@@ -90,16 +90,18 @@
 
 <main>
     <header class="hero">
-        <div class="hero-icon">
+         <div class="hero-icon-container">
              <img src={profile.icon} alt="Profile Icon" class="profile-icon">
-        </div>
-        <div class="hero-info">
+         </div>
+        <div class="hero-content-container">
             <h1>{profile.name}</h1>
             <div class="info-list">
                 {#each profile.info as item}
                     <div class="info-item">
-                        <h4>{item.label}</h4>
-                        <span class="info-value">{item.value}</span>
+                        <div class="info-text">
+                            <h4>{item.label}</h4>
+                            <span class="info-value">{item.value}</span>
+                        </div>
                     </div>
                 {/each}
             </div>
@@ -108,30 +110,38 @@
 
     <section id="skills" class="section">
         <h2>スキル</h2>
-        {#each skills as skill}
-            <h3>{skill.title}</h3>
-            <p>
-                {skill.description}
-            </p>
-        {/each}
+        <div class="skills-list">
+            {#each skills as skill}
+                <div class="skill-item">
+                    <h3>{skill.title}</h3>
+                    <p>
+                        {skill.description}
+                    </p>
+                </div>
+            {/each}
+        </div>
     </section>
 
     <section id="projects" class="section">
         <h2>プロジェクト</h2>
-        {#each projects as project}
-            <h3>
-                <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {project.name}
-                </a>
-            </h3>
-            <p>
-                {project.description}
-            </p>
-        {/each}
+        <div class="projects-list">
+            {#each projects as project}
+                <div class="project-item">
+                    <h3>
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {project.name}
+                        </a>
+                    </h3>
+                    <p>
+                        {project.description}
+                    </p>
+                </div>
+            {/each}
+        </div>
     </section>
 
     <section id="links" class="section">
@@ -224,22 +234,20 @@
 
     .hero {
         display: flex;
-        align-items: flex-start; /* 上揃えに変更 */
+        align-items: flex-start;
         margin-bottom: 2rem;
         padding: 1rem;
     }
-
-    .hero-icon {
-        flex: 0 0 auto;
-        margin-right: 2rem; /* アイコンと情報の間にマージンを追加 */
-        display: flex;
-        align-items: center;
-         justify-content: center;
+    .hero-icon-container {
+      flex: 0 0 auto;
+      margin-right: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    
-     .hero-info {
-        flex: 1;
-        text-align: left;
+    .hero-content-container{
+       flex: 1;
+       text-align: left;
     }
 
     .profile-icon {
@@ -260,23 +268,36 @@
         font-size: 1.2rem;
         color: #bdbdbd;
     }
-     .info-list {
+    .info-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+          max-width: 100%;
+    }
+
+    .info-item {
+        background-color: #282828;
+        padding: 0.5rem;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .info-text {
          display: flex;
-         flex-direction: column;
-     }
-     .info-item {
-        margin-bottom: 0.3rem;
-        display: flex;
         flex-direction: column;
-        align-items: flex-start;
     }
     .info-item h4 {
         font-size: 1.1rem;
         font-weight: bold;
         margin: 0 0 0.2rem 0;
     }
-
-
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .skill-item {
+       
+    }
     .section h2 {
         font-size: 1.8rem;
         border-bottom: 2px solid #81c784;
@@ -284,12 +305,27 @@
         margin-bottom: 1rem;
     }
 
-    .section h3 {
-        border-left: 6px solid;
-        padding-left: 1rem;
-        font-size: 1.125rem;
+    .skill-item h3 {
+          border-left: 6px solid;
+          padding-left: 1rem;
+         font-size: 1.125rem;
     }
-
+    .projects-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .project-item {
+       
+    }
+    .project-item h3 {
+          border-left: 6px solid;
+          padding-left: 1rem;
+         font-size: 1.125rem;
+    }
+    .section p {
+          margin-bottom: 0.5rem;
+    }
     .links li {
         margin-bottom: 0.5rem;
     }
@@ -299,5 +335,36 @@
         margin-top: 2rem;
         font-size: 0.9rem;
         color: #e7e7e7;
+    }
+     @media (max-width: 768px) {
+        .navbar {
+          display: none;
+        }
+        .hero {
+             flex-direction: column;
+         }
+        .hero-icon-container {
+            margin-right: 0;
+            margin-bottom: 1rem;
+            width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+        }
+        .hero-content-container {
+             width: 100%;
+        }
+        .profile-icon {
+             width: 30%;
+             height: 30%;
+        }
+          .info-list,
+        .skills-list,
+        .projects-list {
+             grid-template-columns: 1fr;
+        }
+         .info-item {
+             max-width: 100%; /* モバイル時はフル幅に */
+        }
     }
 </style>
