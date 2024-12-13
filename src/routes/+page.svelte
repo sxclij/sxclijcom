@@ -19,8 +19,14 @@
         },
     ];
     const links = [
-        { href: "https://qiita.com/sxclij", text: "Qiita: sxclij" },
-        { href: "https://github.com/sxclij", text: "GitHub: sxclij" },
+        {
+            href: "https://qiita.com/sxclij",
+            text: "Qiita: sxclij",
+        },
+        {
+            href: "https://github.com/sxclij",
+            text: "GitHub: sxclij",
+        },
         {
             href: "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F",
             text: "Pagespeed: sxclij.com",
