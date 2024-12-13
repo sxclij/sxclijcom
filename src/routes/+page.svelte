@@ -78,7 +78,7 @@
     <meta name="description" content="sxclijさんのポートフォリオ" />
 </svelte:head>
 
-<nav class="navbar">
+<nav class="best-navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
         <li><a href="#skills">スキル</a></li>
@@ -88,18 +88,18 @@
 </nav>
 
 <main>
-    <header class="hero">
-        <div class="hero-icon-container">
-            <img src={profile.icon} alt="Profile Icon" class="profile-icon" />
+    <header class="best-hero">
+        <div class="best-hero-icon-container">
+            <img src={profile.icon} alt="Profile Icon" class="best-profile-icon" />
         </div>
-        <div class="hero-content-container">
+        <div class="best-hero-content-container">
             <h1>{profile.name}</h1>
-            <div class="info-list">
+            <div class="best-info-list">
                 {#each profile.info as item}
-                    <div class="info-item">
-                        <div class="info-text">
+                    <div class="best-info-item">
+                        <div class="best-info-text">
                             <h4>{item.label}</h4>
-                            <span class="info-value">{item.value}</span>
+                            <span class="best-info-value">{item.value}</span>
                         </div>
                     </div>
                 {/each}
@@ -107,11 +107,11 @@
         </div>
     </header>
 
-    <section id="skills" class="section">
+    <section id="skills" class="best-section">
         <h2>スキル</h2>
-        <div class="skills-list">
+        <div class="best-skills-list">
             {#each skills as skill}
-                <div class="skill-item">
+                <div class="best-skill-item">
                     <h3>{skill.title}</h3>
                     <p>
                         {skill.description}
@@ -121,11 +121,11 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="best-section">
         <h2>プロジェクト</h2>
-        <div class="projects-list">
+        <div class="best-projects-list">
             {#each projects as project}
-                <div class="project-item">
+                <div class="best-project-item">
                     <h3>
                         <a
                             href={project.link}
@@ -143,9 +143,9 @@
         </div>
     </section>
 
-    <section id="links" class="section">
+    <section id="links" class="best-section">
         <h2>リンク</h2>
-        <ul class="links">
+        <ul class="best-links">
             {#each links as link}
                 <li>
                     <a
@@ -160,7 +160,7 @@
         </ul>
     </section>
 
-    <footer class="footer">
+    <footer class="best-footer">
         <p>© 2024 sxclij. All rights reserved.</p>
     </footer>
 </main>
@@ -202,7 +202,7 @@
         color: var(--accent-color);
     }
 
-    .navbar {
+    .best-navbar {
         position: fixed;
         top: 0;
         left: 0;
@@ -213,7 +213,7 @@
         z-index: 1000;
     }
 
-    .navbar ul {
+    .best-navbar ul {
         list-style: none;
         display: flex;
         justify-content: center;
@@ -221,17 +221,17 @@
         padding: 0;
     }
 
-    .navbar li {
+    .best-navbar li {
         margin: 0 1rem;
     }
 
-    .navbar a {
+    .best-navbar a {
         color: var(--primary-text-color);
         font-size: var(--font-size-base);
         transition: color 0.3s;
     }
 
-    .navbar a:hover {
+    .best-navbar a:hover {
         color: var(--accent-color);
     }
 
@@ -244,120 +244,120 @@
         border-radius: 8px;
     }
 
-    .hero {
+    .best-hero {
         display: flex;
         align-items: flex-start;
         margin-bottom: 2rem;
         padding: 1rem;
     }
-    .hero-icon-container {
+    .best-hero-icon-container {
         flex: 0 0 auto;
         margin-right: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .hero-content-container {
+    .best-hero-content-container {
         flex: 1;
         text-align: left;
     }
 
-    .profile-icon {
+    .best-profile-icon {
         width: 50%;
         height: 50%;
         border-radius: 50%;
         object-fit: cover;
     }
 
-    .hero h1 {
+    .best-hero h1 {
         margin: 0;
         font-size: 2.5rem;
         color: var(--accent-color);
     }
 
-    .hero p {
+    .best-hero p {
         margin: 0.5rem 0 0;
         font-size: 1.2rem;
         color: var(--secondary-text-color);
     }
-    .info-list {
+    .best-info-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
         max-width: 100%;
     }
 
-    .info-item {
+    .best-info-item {
         background-color: var(--item-background-color);
         padding: 0.5rem;
         border-radius: 4px;
         box-sizing: border-box;
     }
-    .info-text {
+    .best-info-text {
         display: flex;
         flex-direction: column;
     }
-    .info-item h4 {
+    .best-info-item h4 {
         font-size: 1.1rem;
         font-weight: bold;
         margin: 0 0 0.2rem 0;
     }
 
-    .section {
+    .best-section {
         margin-bottom: 2rem;
     }
 
-    .section h2 {
+    .best-section h2 {
         font-size: var(--font-size-h2);
         border-bottom: 2px solid var(--accent-color);
         padding-bottom: 0.3rem;
         margin-bottom: 1rem;
     }
-    .section p {
+    .best-section p {
         margin-bottom: 0.5rem;
     }
 
-    .skills-list {
+    .best-skills-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
-    .skill-item h3 {
+    .best-skill-item h3 {
         border-left: 6px solid;
         padding-left: 1rem;
         font-size: var(--font-size-h3);
     }
 
-    .projects-list {
+    .best-projects-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
-    .project-item h3 {
+    .best-project-item h3 {
         border-left: 6px solid;
         padding-left: 1rem;
         font-size: var(--font-size-h3);
     }
 
-    .links li {
+    .best-links li {
         margin-bottom: 0.5rem;
     }
-    .footer {
+    .best-footer {
         text-align: center;
         margin-top: 2rem;
         font-size: 0.9rem;
         color: #e7e7e7;
     }
     @media (max-width: 768px) {
-        .navbar {
+        .best-navbar {
             display: none;
         }
-        .hero {
+        .best-hero {
             flex-direction: column;
         }
-        .hero-icon-container {
+        .best-hero-icon-container {
             margin-right: 0;
             margin-bottom: 1rem;
             width: 100%;
@@ -365,19 +365,19 @@
             align-items: center;
             justify-content: center;
         }
-        .hero-content-container {
+        .best-hero-content-container {
             width: 100%;
         }
-        .profile-icon {
+        .best-profile-icon {
             width: 30%;
             height: 30%;
         }
-        .info-list,
-        .skills-list,
-        .projects-list {
+        .best-info-list,
+        .best-skills-list,
+        .best-projects-list {
             grid-template-columns: 1fr;
         }
-        .info-item {
+        .best-info-item {
             max-width: 100%;
         }
     }
