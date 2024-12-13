@@ -219,15 +219,17 @@
         color: #bdbdbd;
     }
 
-    .section {
-        margin-bottom: 2rem;
-    }
-
     .section h2 {
         font-size: 1.8rem;
         border-bottom: 2px solid #81c784;
         padding-bottom: 0.3rem;
         margin-bottom: 1rem;
+    }
+
+    .section h3 {
+        border-left: 6px solid;
+        padding-left: 1rem;
+        font-size: 1.125rem;
     }
 
     .links li {
