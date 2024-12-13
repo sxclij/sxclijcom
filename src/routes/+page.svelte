@@ -83,13 +83,7 @@
                         target="_blank"
                         rel="noopener noreferrer">自作プログラミング言語</a
                     >
-                    を設計し、
-                    <a
-                        href="https://scratch.mit.edu"
-                        target="_blank"
-                        rel="noopener noreferrer">Scratch</a
-                    >
-                    上で動作する独自のコンパイラやインタプリタの開発を行っています。
+                    を設計し、Scratch上で動作する独自のコンパイラやインタプリタの開発を行っています。
                 </p>
             </li>
         </ul>
