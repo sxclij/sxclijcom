@@ -15,6 +15,10 @@
                 label: "趣味",
                 value: "読書 / 音ゲー / Nostr",
             },
+            {
+                label: "好きなデータ構造",
+                value: "Array / Treap / RBtree",
+            }
         ],
     };
     const skills = [
