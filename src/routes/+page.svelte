@@ -18,6 +18,10 @@
             {
                 label: "好きなデータ構造",
                 value: "Array / Treap / RBtree",
+            },
+            {
+              label: "mail",
+              value: "sxclij@gmail.com"
             }
         ],
     };
@@ -73,6 +77,10 @@
         {
             name: "Discord: sxclij-server",
             url: "https://discord.gg/yFtY7ym4DA",
+        },
+        {
+          name: "nostter: sxclij",
+          url: "https://nostter.app/sxclij@nostrcheck.me",
         },
     ];
 </script>
