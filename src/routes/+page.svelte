@@ -86,7 +86,7 @@
 </script>
 <svelte:head>
     <title>sxclij.com</title>
-    <meta name="description" content="sxclijさんのポートフォリオ" />
+    <meta name="description" content="sxclijさんのお手製サイト" />
 </svelte:head>
 
 <nav class="navbar">
