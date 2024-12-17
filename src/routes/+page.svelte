@@ -20,7 +20,7 @@
         value: "Array / Treap / RBtree",
       },
       {
-        label: "mail",
+        label: "連絡先",
         value: "sxclij@gmail.com",
       },
     ],
