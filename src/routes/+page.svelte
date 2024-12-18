@@ -1,4 +1,5 @@
 <script>
+
   const profile = {
     icon: "/icon.svg",
     name: "sxclij",
@@ -260,11 +261,6 @@
     margin: 0;
     font-size: 2.5rem;
     color: var(--accent-color);
-  }
-  .hero p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-    color: var(--secondary-text-color);
   }
   .info-list {
     display: grid;
