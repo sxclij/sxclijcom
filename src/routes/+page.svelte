@@ -1,5 +1,4 @@
 <script>
-
   const profile = {
     icon: "/icon.svg",
     name: "sxclij",
