@@ -63,12 +63,12 @@
   ];
   const links = [
     {
-      name: "Qiita: sxclij",
-      url: "https://qiita.com/sxclij",
-    },
-    {
       name: "GitHub: sxclij",
       url: "https://github.com/sxclij",
+    },
+    {
+      name: "Qiita: sxclij",
+      url: "https://qiita.com/sxclij",
     },
     {
       name: "Pagespeed: sxclij.com",
