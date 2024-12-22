@@ -1,4 +1,60 @@
 <script>
+  import { onMount } from "svelte";
+  import { createRxNostr, createRxForwardReq } from "rx-nostr";
+  import WebSocket from "ws";
+  import { finalizeEvent, verifyEvent } from "nostr-tools/pure";
+  import { SimplePool } from "nostr-tools/pool";
+  import { useWebSocketImplementation } from "nostr-tools/pool";
+  import { generateSecretKey, getPublicKey } from "nostr-tools/pure";
+
+  onMount(async () => {
+    useWebSocketImplementation(WebSocket);
+
+    let sk = generateSecretKey(); // `sk` is a Uint8Array
+    let pk = getPublicKey(sk); // `pk` is a hex string
+    const pool = new SimplePool();
+    let newEvent = finalizeEvent(
+      {
+        kind: 1,
+        created_at: Math.floor(Date.now() / 1000),
+        tags: [],
+        content: "hello",
+      },
+      sk,
+    );
+    let isGood = verifyEvent(newEvent);
+
+    let relays = ["wss://yabu.me"];
+
+    let h = pool.subscribeMany(
+      [...relays],
+      [
+        {
+          authors: [
+            "32e1827635450ebb3c5a7d12c1f8e7b2b514439ac10a67eef3d9fd9c5c68e245",
+          ],
+        },
+      ],
+      {
+        onevent(event) {
+          // this will only be called once the first time the event is received
+          // ...
+          console.log(event)
+        },
+        oneose() {
+          h.close();
+        },
+      },
+    );
+
+    await Promise.any(pool.publish(relays, newEvent));
+    console.log("published to at least one relay!");
+
+    let events = await pool.querySync(relays, { kinds: [0, 1] });
+    let event = await pool.get(relays, {
+      ids: ["44e1827635450ebb3c5a7d12c1f8e7b2b514439ac10a67eef3d9fd9c5c68e245"],
+    });
+  });
   const profile = {
     icon: "/icon.svg",
     name: "sxclij",
