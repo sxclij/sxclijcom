@@ -1,7 +1,8 @@
 <nav class="navbar">
     <ul>
         <li><a href="/">sxclij.com</a></li>
-        <li><a href="/blog/daily">日報</a></li>
+        <li><a href="/daily">日報</a></li>
+        <li><a href="/blog">ブログ</a></li>
     </ul>
 </nav>
 <slot></slot>
