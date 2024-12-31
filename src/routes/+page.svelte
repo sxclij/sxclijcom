@@ -155,9 +155,6 @@
       {/each}
     </ul>
   </section>
-  <footer class="footer">
-    <p>© 2024 sxclij. All rights reserved.</p>
-  </footer>
 </main>
 
 <style>
@@ -247,12 +244,6 @@
   }
   .link-list li {
     margin-bottom: 0.5rem;
-  }
-  .footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #e7e7e7;
   }
   @media (max-width: 768px) {
     .hero {

@@ -5,7 +5,9 @@
     </ul>
 </nav>
 <slot></slot>
-
+<footer class="footer">
+    <p>© 2024 sxclij. All rights reserved.</p>
+</footer>
 
 <svelte:head>
     <title>sxclij.com</title>
@@ -71,5 +73,11 @@
     }
     .navbar a:hover {
         color: var(--accent-color);
+    }
+    .footer {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #e7e7e7;
     }
 </style>
