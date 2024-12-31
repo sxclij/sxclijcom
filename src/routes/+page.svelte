@@ -71,6 +71,10 @@
       url: "https://qiita.com/sxclij",
     },
     {
+      name: "note: sxclij",
+      url: "https://note.com/sxclij",
+    },
+    {
       name: "Pagespeed: sxclij.com",
       url: "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsxclij.com%2F",
     },
@@ -93,9 +97,7 @@
 <nav class="navbar">
   <ul>
     <li><a href="/">sxclij.com</a></li>
-    <li><a href="#skills">スキル</a></li>
-    <li><a href="#projects">プロジェクト</a></li>
-    <li><a href="#links">リンク</a></li>
+    <li><a href="/daily">日報</a></li>
   </ul>
 </nav>
 <main>
