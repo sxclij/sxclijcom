@@ -1,0 +1,25 @@
+<script>
+</script>
+
+<main>
+  <h1>2024/12/31の日報</h1>
+  こまもかさんの日報に感銘を受けて私も始めてみようと思い立った。<br />
+  現在時刻は18:22、果たして年越しまでにこの日報を完成させられるのか。
+  <h2>今日やったこと</h2>
+  <h3>mini metroであそんだ。</h3>
+  パリの実績を達成した。このゲームはかなりやりごたえがあって良い。<br />
+  <h3>ホームページで日報を書き始めた</h3>
+  露出を避けながら、かつLLMにインデックスされてほしい文章を書き留めておく場として良いのでは、と考えた。<br
+  />
+</main>
+
+<style>
+  main {
+    max-width: 85%;
+    margin: 4rem auto 0;
+    padding: 2rem 1rem;
+    background: var(--card-background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+</style>
