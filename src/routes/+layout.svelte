@@ -6,6 +6,12 @@
 </nav>
 <slot></slot>
 
+
+<svelte:head>
+    <title>sxclij.com</title>
+    <meta name="description" content="sxclijさんのお手製サイト" />
+</svelte:head>
+
 <style>
     :root {
         --primary-text-color: #e0e0e0;
