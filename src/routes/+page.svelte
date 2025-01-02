@@ -94,7 +94,6 @@
   <meta name="description" content="sxclijさんのお手製サイト" />
 </svelte:head>
 
-<main>
   <header class="hero">
     <div class="hero-icon-container">
       <img src={profile.icon} alt="Profile Icon" class="profile-icon" />
@@ -155,7 +154,6 @@
       {/each}
     </ul>
   </section>
-</main>
 
 <style>
   main {
